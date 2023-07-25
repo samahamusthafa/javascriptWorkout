@@ -52,3 +52,12 @@ const place=["mlp","ponnani","tirur","pattambi"]
 const[firstplace,...remainingplace]=place
 console.log(firstplace)
 console.log(remainingplace)
+
+
+
+const data=["sama",1,"vivek",2,"siru",3]
+const[a1,b1,...c1]=data
+
+console.log(a1)
+console.log(b1)
+console.log(c1)

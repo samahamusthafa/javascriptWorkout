@@ -59,3 +59,34 @@ calculations(100,200,((sumres)=>{
 }),((re)=>{
     console.log(re)
 }))
+
+function a(data,hello){
+    setTimeout(()=>{
+        hello(data)
+    },3000)
+}
+a('hi hello',sayHello)
+function sayHello(res){
+   console.log(res)
+}
+
+
+
+function sumofNum(num1,num2){
+        let sum=num1+num2;
+
+        return new Promise((resolve,reject)=>{
+            if(sum===0){
+                reject('zero')
+            }else{
+                resolve(sum)
+            }
+        })
+}
+sumofNum(10,20).then((result)=>{
+    console.log(result)
+}).catch((err)=>{
+    
+})
+
+

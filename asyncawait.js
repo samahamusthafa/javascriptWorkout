@@ -60,3 +60,23 @@ async function getUser1(){
     console.log(number1)
 }
 getUser1()
+
+
+
+function getAge(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(20)
+        },1000)
+    })
+}
+Promise.all([getAge()]).then((result)=>{
+    console.log(result)
+})
+
+async function getUserr(){
+    const age=await getAge()
+   
+    console.log(age)
+}
+getUserr()
